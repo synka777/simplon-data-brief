@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  script_service:
+    build: ./script_service # Uses script_service's DockerFile
+    volumes:
+      # <local_volume>:<container_volume>
+      - ./script_service:/app
+      - ./shared_data:/data
+    depends_on:
+      - sqlite_service # Start db service first
+    stdin_open: true
+    tty: true
+
+  sqlite_service:
+    image: nouchka/sqlite3
+    volumes:
+      - ./shared_data:/data # Mandatory to ensure changes are kept between container runs
+    # These two allow smoother use of sqlite cli through docker exec -it
+    stdin_open: true
+    tty: true

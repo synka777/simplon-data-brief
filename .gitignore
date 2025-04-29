@@ -1,0 +1,39 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# SQLite database files (tu ne veux pas versionner les données)
+*.db
+*.sqlite3
+
+# Virtual environment (au cas où)
+venv/
+.env/
+.env.*
+
+# Docker volumes (s'ils sont montés en local)
+volumes/
+*.pid
+
+# Logs
+*.log
+
+# MacOS system files
+.DS_Store
+
+# VSCode / PyCharm / IDEs
+.vscode/
+.idea/
+
+# Docker files (non essentiels si générés)
+*.tar
+*.bak
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter notebooks checkpoints (si jamais)
+.ipynb_checkpoints/

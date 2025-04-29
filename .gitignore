@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *.pyo
 
+# Custom logic
+tmp/
+
 # SQLite database files (tu ne veux pas versionner les données)
 *.db
 *.sqlite3

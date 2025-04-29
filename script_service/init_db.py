@@ -7,6 +7,7 @@ def create_table(statement):
         print('Creating table... ', end="")
         connection = sqlite3.connect(DB_PATH)
         cursor = connection.cursor()
+
         cursor.execute(statement)
         connection.commit()
         print('OK')
@@ -14,6 +15,7 @@ def create_table(statement):
         print(f"SQLite error: {e}")
     finally:
         connection.close()
+
 
 def create_db(db_path):
     global DB_PATH

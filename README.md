@@ -23,7 +23,7 @@ simplon-data-brief/
 
 ## Structure des tables bassée sur les données en input:
 
-#### Table `product`:
+#### Table `products`:
 | Attribut | Type | Description |
 | ------ | ------ | ------ |
 | id | VARCHAR | Référence produit |
@@ -31,14 +31,14 @@ simplon-data-brief/
 | price | DECIMAL | Prix du produit |
 | qty | INTEGER | Stock initial |
 
-#### Table `shop`:
+#### Table `shops`:
 | Attribut | Type | Description |
 | ------ | ------ | ------ |
 | id | INTEGER | ID du magasin |
 | city | VARCHAR(255) | Ville |
 | employees | INTEGER | Nombre de salariés |
 
-#### Table `order`
+#### Table `orders`
 | Attribut | Type | Description |
 | ------ | ------ | ------ |
 | date | TIMESTAMP | Date de la commande |

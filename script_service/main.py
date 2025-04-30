@@ -106,7 +106,7 @@ def main():
     length = len(data_sources)
     for i, ds in enumerate(data_sources):
         print(f"Attempting CSV download {i+1}/{length}... ", end="")
-        if download_csv(ds["url"], f"{tmp_dir}{ds["type"]}.csv"):
+        if download_csv(ds["url"], f"{tmp_dir}{ds['type']}.csv"):
             print("OK")
 
     #################################
@@ -114,7 +114,7 @@ def main():
 
     for i, ds in enumerate(data_sources):
         print(f"Loading data into table {ds['type']}...", end="")
-        res = insert_data(ds["type"], f"{tmp_dir}{ds["type"]}.csv", db_path)
+        res = insert_data(ds["type"], f"{tmp_dir}{ds['type']}.csv", db_path)
         if res:
             print("OK")
     print('-----')

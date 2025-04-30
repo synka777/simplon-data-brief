@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   script_service:
     build: ./script_service # Uses script_service's DockerFile
